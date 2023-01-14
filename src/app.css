@@ -1,0 +1,25 @@
+@font-face {
+    font-family: JosefinSans;
+    src: url(./font/JosefinSans-VariableFont_wght.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: JosefinSans;
+    list-style: none;
+}
+
+.app{
+    position: relative;
+}
+
+
+::-webkit-scrollbar{
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background: #494949;
+    border-radius: 100px;
+}

@@ -1,0 +1,103 @@
+nav{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgb(240, 240, 240);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.navHeigth, nav{
+    height: calc(40px + 2vw); 
+}
+
+body:has(.content_info_nav) nav {
+    background: none;
+    box-shadow: none;
+}
+
+body:has(.content_info_nav) nav .search_container {
+    display: none;
+}
+
+nav .nav_right .nav_links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calc(20px + 1vw);
+}
+
+nav .nav_right .nav_links .NavLink{
+    position: relative;
+    font-size: calc(15px + .5vw);
+    text-decoration: none;
+    color: rgb(63, 63, 63);
+    font-weight: 600;
+    padding: 7px 8px 5px;
+    border-radius: 5px;
+}
+
+.NavLink::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-4deg);
+    z-index: -1;
+
+    background: rgba(255, 240, 104);
+    width: 100%;
+    height: 55%;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+nav .nav_right .nav_links .NavLink:hover::before{
+    opacity: 1;
+}
+
+.NavLink.active::before{
+    opacity: 1;
+}
+
+.search_container{
+    position: relative;
+    width: calc(200px + 10vw);
+    height: 40px;
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 40px;
+}
+
+.search_container #searchInput{
+    width: 100%;
+    height: 100%;
+    font-size: calc(10px + .5vw);
+    padding: 2px 60px 0 10px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+}
+
+.search_container #searchButton{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    aspect-ratio: 1.5;
+    font-size: 20px;
+    color: rgb(161, 161, 161);
+    border: none;
+    outline: none;
+    border-radius: 100px;
+    background: rgb(37, 37, 37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

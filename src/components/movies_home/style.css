@@ -1,0 +1,25 @@
+.all_{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: calc(5px + 2vw);
+    flex-wrap: wrap;
+    padding-top: calc(10px + 2.5vh);
+    padding-bottom: 15px;
+}
+
+.seeMore{
+    width: calc(100px + 5vw);
+    min-height: calc(50px + 5vh);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgb(160, 160, 160);
+    color: #222;
+    font-size: calc(10px + 1vw);
+    cursor: pointer;
+    transition: .3s;
+}
+.seeMore:hover{
+    background: rgb(192, 192, 192);
+}

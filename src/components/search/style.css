@@ -1,0 +1,29 @@
+.type_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    gap: 20px;
+}
+
+.type_btn .type_btn_{
+    position: relative;
+    font-size: calc(10px + 1vw);
+    text-decoration: none;
+    padding: 9px 15px 7px;
+    border-radius: 10px;
+    color: rgb(48, 48, 48);
+}
+
+.type_btn .type_btn_.active{
+    background: rgb(201, 201, 201);
+}
+
+.search_movies, .search_tv{
+    display: flex;
+    gap: calc(5px + 2vw);
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 15px;
+}
